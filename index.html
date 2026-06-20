@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWFC | Grand World Fighting Club</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GWFC</div>
+        <nav>
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('events')">Events</a>
+            <a onclick="showPage('fighters')">Fighters</a>
+            <a onclick="showPage('styles')">MMA Styles</a>
+            <a onclick="showPage('rankings')">Rankings</a>
+            <a onclick="showPage('ppv')">PPV</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="page active" style="opacity: 1; transform: translateY(0); padding: 0;">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Grand World <span>Fighting Club</span></h1>
+                <p>Where Global Champions Are Forged</p>
+                <button onclick="showPage('events')">Watch Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="page">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="grid">
+            <div class="card" onclick="openEvent('GWFC 101','Gane vs Pereira','https://platform.mmamania.com/wp-content/uploads/sites/110/2026/06/gettyimages-2275223937.jpg', 'https://www.youtube.com/watch?v=YYxbi6itRvg')">
+                <img src="https://platform.mmamania.com/wp-content/uploads/sites/110/2026/06/gettyimages-2275223937.jpg" alt="GWFC 101">
+                <h3>GWFC 101</h3>
+                <p>Gane vs Pereira</p>
+                <div class="card-meta">
+                    <span>Main Card • 10 PM EST</span>
+                    <span class="status-badge">Tickets Available</span>
+                </div>
+            </div>
+            <div class="card" onclick="openEvent('Fight Night','Topuria vs Gaethje','https://lasueur.com/wp-content/uploads/2026/02/topuria-vs-gaethje-date.jpg', 'https://www.youtube.com/watch?v=WAy1CkHhXFc')">
+                <img src="https://lasueur.com/wp-content/uploads/2026/02/topuria-vs-gaethje-date.jpg" alt="Fight Night">
+                <h3>Fight Night</h3>
+                <p>Topuria vs Gaethje</p>
+                <div class="card-meta">
+                    <span>Fight Night 42 • Las Vegas</span>
+                    <span class="status-badge">Selling Fast</span>
+                </div>
+            </div>
+            <div class="card" onclick="openEvent('Grand Prix','Tawanchai Feature','https://cdn.onefc.com/wp-content/uploads/2025/01/Tawanchai-PK-Saenchai-Superbon-ONE-170-43-scaled.jpg', 'https://www.youtube.com/watch?v=ioVZcOPi9yo')">
+                <img src="https://cdn.onefc.com/wp-content/uploads/2025/01/Tawanchai-PK-Saenchai-Superbon-ONE-170-43-scaled.jpg" alt="World Grand Prix">
+                <h3>World Grand Prix</h3>
+                <p>Tawanchai Feature</p>
+                <div class="card-meta">
+                    <span>Muay Thai Tourney</span>
+                    <span class="status-badge" style="color: #e67e22;">PPV Pre-order</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIGHTERS -->
+    <section id="fighters" class="page">
+        <h2 class="section-title">Featured Fighters</h2>
+        <div class="grid">
+            <div class="card" onclick="openFighter('Cain Velasquez','31-3','HW','Wrestling Pressure Power')">
+                <img src="https://ufc-video.s3.amazonaws.com/image/photo_galleries/UFC146/11_Velasquez_Silva_06.jpg" alt="Cain Velasquez">
+                <h3>Cain Velasquez</h3>
+                <div class="card-meta">
+                    <span>Heavyweight Division</span>
+                    <span>Rank: Former Champ</span>
+                </div>
+            </div>
+            <div class="card" onclick="openFighter('Nick Diaz','26-10','WW','Boxing Pressure Cardio')">
+                <img src="https://i.ytimg.com/vi/3DisApq73OI/maxresdefault.jpg" alt="Nick Diaz">
+                <h3>Nick Diaz</h3>
+                <div class="card-meta">
+                    <span>Welterweight Division</span>
+                    <span>Fan Favorite</span>
+                </div>
+            </div>
+            <div class="card" onclick="openFighter('Carlos Condit','32-14','WW','Striking + Submissions')">
+                <img src="https://media.video-cdn.espn.com/motion/2021/0116/dm_210116_MMA_CONDIT_BROWN_SUPLEX/dm_210116_MMA_CONDIT_BROWN_SUPLEX.jpg" alt="Carlos Condit">
+                <h3>Carlos Condit</h3>
+                <div class="card-meta">
+                    <span>Welterweight Division</span>
+                    <span>Legendary Status</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MMA STYLES -->
+    <section id="styles" class="page">
+        <h2 class="section-title">The Disciplines of MMA</h2>
+        <p style="text-align: center; max-width: 700px; margin: -20px auto 40px auto; color: #aaa; font-size: 1.2rem;">
+            Mixed Martial Arts demands mastery across multiple realms. Click on the view buttons to explore the elite champions who dominate using these core combat assets.
+        </p>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="style-card">
+                <h3>1. Boxing</h3>
+                <p>The sweet science of punching, head movement, and footwork. Boxing isolates hand strikes to maximize speed, accuracy, and rotational power.</p>
+                <div class="advantage-box">
+                    <strong>MMA Advantage:</strong> Controls the distance using the jab, coordinates complex pocket exchanges, and sets up precise knockout trajectories.
+                </div>
+                <button class="btn-small" onclick="openDisciplineChampions('boxing')">View Best Boxers & Champions</button>
+            </div>
+            <div class="style-card">
+                <h3>2. Muay Thai</h3>
+                <p>Known as the "Art of Eight Limbs," Muay Thai incorporates punches, kicks, knees, and elbows alongside an advanced standing clinch system.</p>
+                <div class="advantage-box">
+                    <strong>MMA Advantage:</strong> Devastating leg kicks that dismantle an opponent's mobility, and heavy elbow strikes inside the close-quarters clinch.
+                </div>
+                <button class="btn-small" onclick="openDisciplineChampions('muaythai')">View Best Muay Thai Fighters</button>
+            </div>
+            <div class="style-card">
+                <h3>3. Brazilian Jiu-Jitsu (BJJ)</h3>
+                <p>A ground-fighting art centered around positional dominance, leverage, chokes, and joint locks to force a submission without striking.</p>
+                <div class="advantage-box">
+                    <strong>MMA Advantage:</strong> Provides the ultimate defense when taken down and weaponizes the ground floor through guard-passes and joint submissions.
+                </div>
+                <button class="btn-small" onclick="openDisciplineChampions('bjj')">View Best Jiu-Jitsu Masters</button>
+            </div>
+            <div class="style-card">
+                <h3>4. Wrestling</h3>
+                <p>Focused on explosive takedowns, control, and physical leverage to force opponents to the canvas and dictate positional momentum.</p>
+                <div class="advantage-box">
+                    <strong>MMA Advantage:</strong> Serves as the ultimate "dictator of the fight." Strong wrestlers decide whether a bout stays standing or goes to the ground.
+                </div>
+                <button class="btn-small" onclick="openDisciplineChampions('wrestling')">View Best Wrestlers</button>
+            </div>
+            <div class="style-card">
+                <h3>5. Judo</h3>
+                <p>A grappling system dedicated to shifting an opponent's balance to execute high-impact body throws, sweeps, and trips.</p>
+                <div class="advantage-box">
+                    <strong>MMA Advantage:</strong> Exceptional inside the clinch against the cage wall, converting defensive body locks into sudden, devastating throws.
+                </div>
+                <button class="btn-small" onclick="openDisciplineChampions('judo')">View Best Judo Practitioners</button>
+            </div>
+            <div class="style-card">
+                <h3>6. Karate</h3>
+                <p>Emphasizes lightning-fast, linear blitzes, precise point striking, counter-attacks, and wide, low-center stances.</p>
+                <div class="advantage-box">
+                    <strong>MMA Advantage:</strong> Elite management of range. Karate-style fighters use blitzing in-and-out footwork to strike without being counter-hit or wrestled.
+                </div>
+                <button class="btn-small" onclick="openDisciplineChampions('karate')">View Best Karate Specialists</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RANKINGS -->
+    <section id="rankings" class="page">
+        <h2 class="section-title">Official Rankings</h2>
+        <div id="rankings-container" style="max-width: 900px; margin: 0 auto;"></div>
+    </section>
+
+    <!-- PPV -->
+    <section id="ppv" class="page">
+        <h2 class="section-title">PPV / Tickets</h2>
+        <div class="profile" style="text-align: center;">
+            <h3>GWFC 101 - LIVE STAGE</h3>
+            <p style="border:none; color:#aaa;">Secure digital access stream pass or physical venue floor entry tickets instantly.</p>
+            <button style="margin-top: 15px;" onclick="alert('Payment gateway integration pending - Stripe Sandbox Access Only')">Purchase Live Access</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>© 2026 Grand World Fighting Club (GWFC) LLC. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#" onclick="alert('Cookie preferences updated.'); return false;">Cookie Preferences</a>
+                <a href="#">Trademarks</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">×</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
